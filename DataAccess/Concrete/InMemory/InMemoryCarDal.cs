@@ -15,10 +15,10 @@ namespace DataAccess.Concrete
 
         public InMemoryCarDal()
         {
-            _cars = new List<Car> { new Car { Id=1,BrandId=1,ColorId=1,ModelYear="2000",DailyPrice=300,Description="Ekonomik"},
-            new Car{Id=2,BrandId=2,ColorId=4,DailyPrice=784,ModelYear="2019",Description="Rahat"},
-            new Car{Id=3,BrandId=6,ColorId=3,ModelYear="2017",DailyPrice=1000,Description="Hızlı"},
-            new Car{Id=4,BrandId=2,ColorId=1,ModelYear="2018",DailyPrice=710,Description="Güvenilir"}
+            _cars = new List<Car> { new Car { Id=1,BrandId=1,ColorId=1,ModelYear="2000",DailyPrice=300,Descriptions="Ekonomik"},
+            new Car{Id=2,BrandId=2,ColorId=4,DailyPrice=784,ModelYear="2019",Descriptions="Rahat"},
+            new Car{Id=3,BrandId=6,ColorId=3,ModelYear="2017",DailyPrice=1000,Descriptions="Hızlı"},
+            new Car{Id=4,BrandId=2,ColorId=1,ModelYear="2018",DailyPrice=710,Descriptions="Güvenilir"}
             };
         }
 
@@ -62,7 +62,7 @@ namespace DataAccess.Concrete
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.ModelYear = car.ModelYear;
             carToUpdate.DailyPrice = car.DailyPrice;
-            carToUpdate.Description = car.Description;
+            carToUpdate.Descriptions = car.Descriptions;
 
             
         }
