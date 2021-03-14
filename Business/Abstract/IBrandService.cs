@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    public interface IBrandService
+    public interface IBrandService:IEntityService<Entities.Concrete.Brand>
     {
     }
 }
