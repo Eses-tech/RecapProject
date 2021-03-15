@@ -25,7 +25,11 @@ namespace Business.Concrete
             if (car.CarName.Length>=2 && car.DailyPrice>0)
             {
                 _carDal.Add(car);
-                Console.WriteLine("Veritabanına araç eklendi..");
+                Console.WriteLine("Veritabanina arac eklendi..");
+            }
+            else
+            {
+                Console.WriteLine("Veritabanina arac eklenemedi..");
             }
             
         }
