@@ -35,7 +35,7 @@ namespace ConsoleUI
         private static void CarGetDetail()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetCarDetails())
+            foreach (var car in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(car.CarName + "/" + car.BrandName + "/" + car.ColorName + "/" + car.DailyPrice);
             }
@@ -44,7 +44,7 @@ namespace ConsoleUI
         private static void ColorGetAll()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());
-            foreach (var color in colorManager.GetAll())
+            foreach (var color in colorManager.GetAll().Data)
             {
                 Console.WriteLine(color.ColorName);
             }
@@ -53,7 +53,7 @@ namespace ConsoleUI
         private static void ColorGetById()
         {
             ColorManager colorManager = new ColorManager(new EfColorDal());
-            Console.WriteLine(colorManager.GetById(6).ColorName);
+            Console.WriteLine(colorManager.GetById(6).Data.ColorName);
         }
 
         private static void ColorUpdate()
@@ -77,13 +77,13 @@ namespace ConsoleUI
         private static void BrandGetById()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Console.WriteLine(brandManager.GetById(4).BrandName);
+            Console.WriteLine(brandManager.GetById(4).Data.BrandName);
         }
 
         private static void BrandGetALL()
         {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
+            foreach (var brand in brandManager.GetAll().Data)
             {
                 Console.WriteLine(brand.BrandName);
             }
@@ -110,13 +110,13 @@ namespace ConsoleUI
         private static void CarGetById()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            Console.WriteLine(carManager.GetById(1009).CarName + "/" + carManager.GetById(1009).Descriptions);
+            Console.WriteLine(carManager.GetById(1009).Data.CarName + "/" + carManager.GetById(1009).Data.Descriptions);
         }
 
         private static void CarGetAll()
         {
             CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetCarDetails())
+            foreach (var car in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(car.BrandName + "/" + car.CarName + "/" + car.ColorName + "/" + car.DailyPrice);
             }

@@ -1,16 +1,17 @@
 ﻿using Core;
+using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Abstract
 {
-    public interface IEntityService<T> where T:class,IEntity,new()
+    public interface IEntityService<B> where B:class,IEntity,new()
     {
-        List<T> GetAll();
-        T GetById(int id);
-        void Add(T entity);
-        void Delete(T entity);
-        void Update(T entity);
+        IDataResult<List<B>> GetAll();
+        IDataResult<B> GetById(int id);
+        IResult Add(B entity);
+        IResult Delete(B entity);
+        IResult Update(B entity);
     }
 }
