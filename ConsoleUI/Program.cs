@@ -29,7 +29,6 @@ namespace ConsoleUI
             //ColorGetById();
             //ColorGetAll();
 
-
         }
 
         private static void CarGetDetail()
