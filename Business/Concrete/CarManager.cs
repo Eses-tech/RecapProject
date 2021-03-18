@@ -22,11 +22,11 @@ namespace Business.Concrete
             
         }
 
-        public IResult Add(Car car)
+        public IResult Add(Car entity)
         {
-            if (car.CarName.Length>=2 && car.DailyPrice>0)
+            if (entity.CarName.Length>=2 && entity.DailyPrice>0)
             {
-                _carDal.Add(car);
+                _carDal.Add(entity);
                 return new SuccessResult(Messages.Yes);
             }
             else

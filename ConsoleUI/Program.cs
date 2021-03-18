@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using DataAccess.Abstract;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
@@ -29,6 +30,28 @@ namespace ConsoleUI
             //ColorGetById();
             //ColorGetAll();
 
+            CustomerAdd();
+
+            //UserAdd();
+
+        }
+
+        private static void UserAdd()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            userManager.Add(new User { FirstName = "Papatya", LastName = "Elma", Email = "papatya@xxx.com", Password = "****" });
+        }
+
+        private static void CustomerAdd()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            var result = customerManager.Add(new Customer { UserId = 1, CompanyName = "People" });
+            Console.WriteLine(result.Message);
+            foreach (var customer in customerManager.GetAll().Data)
+            {
+                Console.WriteLine("UserId:" + customer.UserId);
+                Console.WriteLine("CompanyName:" + customer.CompanyName);
+            }
         }
 
         private static void CarGetDetail()
