@@ -29,9 +29,7 @@ namespace ConsoleUI
             //ColorUpdate();
             //ColorGetById();
             //ColorGetAll();
-
-            CustomerAdd();
-
+            //CustomerAdd();
             //UserAdd();
 
         }
