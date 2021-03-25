@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac;
 using Core.CrossCuttingConcerns.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -24,9 +25,11 @@ namespace Business.Concrete
             
         }
 
+        [ValidationAspect(typeof(CarValidator))]
+
         public IResult Add(Car entity)
         {
-            ValidationTool.Validate(new CarValidator(),entity);
+            
             _carDal.Add(entity);
              return new SuccessResult(Messages.Yes);
             
