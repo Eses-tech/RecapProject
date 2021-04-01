@@ -80,7 +80,7 @@ namespace Business.Concrete
 
             var oldPath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\wwwroot")) + _carImageDal.Get(p => p.Id == carImage.Id).ImagePath;
 
-            carImage.ImagePath = FileHelper.Update(oldPath, file);
+            carImage.ImagePath = FileHelper.Update(file,oldPath);
             carImage.Date = DateTime.Now;
             _carImageDal.Update(carImage);
             return new SuccessResult();
