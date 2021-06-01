@@ -5,12 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Http;
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : Controller
+    public class AuthController : ControllerBase
     {
         private IAuthService _authService;
 
@@ -40,11 +40,14 @@ namespace WebAPI.Controllers
         [HttpPost("register")]
         public ActionResult Register(UserForRegisterDto userForRegisterDto)
         {
+           
             var userExists = _authService.UserExists(userForRegisterDto.Email);
             if (!userExists.Success)
             {
                 return BadRequest(userExists.Message);
             }
+           
+            
 
             var registerResult = _authService.Register(userForRegisterDto, userForRegisterDto.Password);
             var result = _authService.CreateAccessToken(registerResult.Data);
