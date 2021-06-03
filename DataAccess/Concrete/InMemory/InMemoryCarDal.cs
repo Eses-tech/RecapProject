@@ -70,6 +70,7 @@ namespace DataAccess.Concrete
             carToUpdate.DailyPrice = car.DailyPrice;
             carToUpdate.Descriptions = car.Descriptions;
 
+
             
         }
     }

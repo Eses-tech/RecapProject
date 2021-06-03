@@ -10,5 +10,6 @@ namespace Core.Entity.Concrete
         public int UserId { get; set; }
         public int OperationClaimId { get; set; }
 
+
     }
 }

@@ -16,5 +16,6 @@ namespace Core.Entity.Concrete
         public bool Status { get; set; }
 
 
+
     }
 }

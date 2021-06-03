@@ -54,6 +54,7 @@ namespace Core.Utilities.Helper
             string result = Environment.CurrentDirectory + path12 + newFileName;
 
             return (result, $"\\Images\\{newFileName}");
+
         }
         
     }

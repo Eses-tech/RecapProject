@@ -25,4 +25,5 @@ namespace Core.Aspects.Autofac.Cache
             _cacheManager.RemoveByPattern(_pattern);
         }
     }
+
 }

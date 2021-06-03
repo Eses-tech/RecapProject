@@ -62,6 +62,7 @@ namespace Core.Utilities.Security.JWT
             claims.AddRoles(operationClaims.Select(c => c.Name).ToArray());
 
             return claims;
+
         }
     }
 }

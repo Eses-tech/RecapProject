@@ -12,5 +12,6 @@ namespace Entities.Concrete
         public string ImagePath { get; set; }
         public DateTime ImageDate { get; set; }
 
+
     }
 }

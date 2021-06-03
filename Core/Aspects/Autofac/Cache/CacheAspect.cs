@@ -35,4 +35,5 @@ namespace Core.Aspects.Autofac.Cache
             _cacheManager.Add(key, invocation.ReturnValue, _duration);
         }
     }
+
 }
