@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Core.Aspects.Autofac
+namespace Core.Aspects.Autofac.Validation
 {
     public class ValidationAspect : MethodInterception
     {
@@ -16,7 +16,7 @@ namespace Core.Aspects.Autofac
         {
             if (!typeof(IValidator).IsAssignableFrom(validatorType))
             {
-                throw new System.Exception("Bu bir doğrulama sınıfı değildir");
+                throw new Exception("Bu bir doğrulama sınıfı değildir");
             }
 
             _validatorType = validatorType;
