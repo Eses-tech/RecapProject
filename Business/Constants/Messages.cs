@@ -14,7 +14,7 @@ namespace Business.Constants
         public static string UserRegistered = "Kullanici Kaydedildi";
         public static string UserNotFound = "Kullanici Bulunamadi";
         public static string PasswordError = "Sifre Hatali";
-        public static string SuccessfulLogin = "Sisteme Giris Basarili";
+        public static string SuccessfullLogin = "Sisteme Giris Basarili";
         public static string UserAlreadyExists = "Bu Kullanici Mevcut";
         public static string AccessTokenCreated = "Access Token Basari ile Olusturuldu";
     }
